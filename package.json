@@ -1,6 +1,6 @@
 {
-  "name": "esbuild-sass-plugin",
-  "version": "2.9.0",
+  "name": "@nathanbeddoewebdev/esbuild-sass-embedded-plugin",
+  "version": "2.9.1",
   "description": "esbuild plugin for sass/scss files supporting both css loader and css result import (lit-element)",
   "main": "lib/index.js",
   "keywords": [
@@ -17,15 +17,15 @@
     "LICENSE",
     "README.MD"
   ],
-  "author": "Gianluca Romeo <glromeo@gmail.com> (https://github.com/glromeo/esbuild-sass-plugin)",
+  "author": "Nathan Beddoe <nbedd2@protonmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/glromeo/esbuild-sass-plugin/issues"
+    "url": "https://github.com/nathanbeddoewebdev/esbuild-sass-plugin/issues"
   },
-  "homepage": "https://github.com/glromeo/esbuild-sass-plugin#readme",
+  "homepage": "https://github.com/nathanbeddoewebdev/esbuild-sass-plugin#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/glromeo/esbuild-sass-plugin.git"
+    "url": "git+https://github.com/nathanbeddoewebdev/esbuild-sass-plugin.git"
   },
   "scripts": {
     "setup": "cd test/fixture && yarn install && cd ../issues && yarn install && cd ../..",
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "resolve": "^1.22.2",
-    "sass": "^1.62.0"
+    "sass-embedded": "file:../embedded-host-node"
   },
   "devDependencies": {
     "@types/node": "^18.15.12",
@@ -57,5 +57,8 @@
   },
   "peerDependencies": {
     "esbuild": "^0.17.17"
+  },
+  "directories": {
+    "test": "test"
   }
 }

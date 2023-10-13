@@ -2,8 +2,8 @@ import {dirname, parse, relative, resolve, sep} from 'path'
 import fs, {readFileSync} from 'fs'
 import {createResolver, fileSyntax, sourceMappingURL} from './utils'
 import {PartialMessage} from 'esbuild'
-import * as sass from 'sass'
-import {ImporterResult} from 'sass'
+import {compileString, Compiler} from 'sass-embedded'
+import {ImporterResult} from 'sass-embedded'
 import {fileURLToPath, pathToFileURL} from 'url'
 import {SassPluginOptions} from './index'
 
@@ -108,11 +108,13 @@ export function createRenderer(options: SassPluginOptions = {}, sourcemap: boole
       }
     }
 
+    const compiler = new Compiler();
+
     const {
       css,
       loadedUrls,
       sourceMap
-    } = sass.compileString(source, {
+    } = compiler.compileString(source, {
       sourceMapIncludeSources: true,
       ...options,
       logger,
