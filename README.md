@@ -25,7 +25,7 @@ A plugin for [esbuild](https://esbuild.github.io/) to handle Sass & SCSS files. 
 ### Install
 
 ```console
-$ npm i esbuild-sass-plugin
+$ npm i esbuild-sass-embedded-plugin
 ```
 
 ### Usage
@@ -33,7 +33,7 @@ $ npm i esbuild-sass-plugin
 Just add it to your esbuild plugins:
 
 ```javascript
-import {sassPlugin} from 'esbuild-sass-plugin'
+import {sassPlugin} from 'esbuild-sass-embedded-plugin'
 
 await esbuild.build({
   ...
