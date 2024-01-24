@@ -3,7 +3,7 @@
 
 [![Build Status][travis-image]][travis-url]
 
-A plugin for [esbuild](https://esbuild.github.io/) to handle Sass & SCSS files.
+A plugin for [esbuild](https://esbuild.github.io/) to handle Sass & SCSS files. Forked from glromeo's esbuild sass plugin to instead use sass embedded's compiler API
 
 ### Features
 * **PostCSS** & **CSS modules**
